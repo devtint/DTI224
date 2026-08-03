@@ -45,10 +45,45 @@
     padding: 0.85rem;
     margin-bottom: 0.65rem;
     transition: all 0.2s ease;
+    cursor: pointer;
   }
   .assignment-item:hover {
     border-color: #1a4d8f;
     background: #f1f3f5;
+  }
+
+  /* Tech Profile Styling */
+  .lang-bar {
+    display: flex;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #e9ecef;
+    margin: 0.75rem 0 1rem;
+  }
+  .lang-bar-segment {
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  .legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #495057;
+    font-family: Georgia, serif;
+  }
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
   }
   .assignment-link {
     font-weight: bold;
@@ -79,29 +114,43 @@
     <a href="https://orcid.org/0009-0007-0176-2022">ORCID</a>
   </p>
 
-  <h2>DTI224 Course Assignments</h2>
+  <h2>01. Technology Profile</h2>
+  <div class="lang-bar">
+    <div class="lang-bar-segment" style="width: 35%; background-color: #38bdf8;" title="Python: 35%"></div>
+    <div class="lang-bar-segment" style="width: 25%; background-color: #00add8;" title="Go: 25%"></div>
+    <div class="lang-bar-segment" style="width: 25%; background-color: #eab308;" title="JavaScript: 25%"></div>
+    <div class="lang-bar-segment" style="width: 15%; background-color: #a1a1aa;" title="Bash: 15%"></div>
+  </div>
+  <div class="legend-grid">
+    <div class="legend-item"><span class="legend-dot" style="background-color: #38bdf8;"></span>Python 35%</div>
+    <div class="legend-item"><span class="legend-dot" style="background-color: #00add8;"></span>Go 25%</div>
+    <div class="legend-item"><span class="legend-dot" style="background-color: #eab308;"></span>JavaScript 25%</div>
+    <div class="legend-item"><span class="legend-dot" style="background-color: #a1a1aa;"></span>Bash 15%</div>
+  </div>
+
+  <h2>02. DTI224 Course Assignments</h2>
   <ul class="assignment-list">
-    <li class="assignment-item">
+    <li class="assignment-item" onclick="location.href='Change/'">
       <a class="assignment-link" href="Change/">1. Coin Change Calculator</a>
       <div class="assignment-desc">Interactive cash register tool calculating coin counts and currency changes.</div>
     </li>
-    <li class="assignment-item">
+    <li class="assignment-item" onclick="location.href='Distance/'">
       <a class="assignment-link" href="Distance/">2. Distance Converter</a>
       <div class="assignment-desc">Conversion utility converting measurements between different distance units.</div>
     </li>
-    <li class="assignment-item">
+    <li class="assignment-item" onclick="location.href='Grade/'">
       <a class="assignment-link" href="Grade/">3. Grade Calculator</a>
       <div class="assignment-desc">Academic score evaluation sheet tracking letter grades and score profiles.</div>
     </li>
-    <li class="assignment-item">
+    <li class="assignment-item" onclick="location.href='Unit_Converter/'">
       <a class="assignment-link" href="Unit_Converter/">4. Unit Converter</a>
       <div class="assignment-desc">General measurement converter supporting length, weight, and volume calculations.</div>
     </li>
-    <li class="assignment-item">
+    <li class="assignment-item" onclick="location.href='HOBBY/'">
       <a class="assignment-link" href="HOBBY/">5. Hobby Page</a>
       <div class="assignment-desc">Personal showcase webpage mapping hobbies and side research.</div>
     </li>
-    <li class="assignment-item">
+    <li class="assignment-item" onclick="location.href='resume_240702404713.html'">
       <a class="assignment-link" href="resume_240702404713.html">6. Original Class Resume</a>
       <div class="assignment-desc">The original static academic resume submission.</div>
     </li>
