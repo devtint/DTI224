@@ -52,65 +52,7 @@
     background: #f1f3f5;
   }
 
-  /* Tech Profile Styling */
-  .lang-bar {
-    display: flex;
-    height: 12px;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: #e9ecef;
-    margin: 0.75rem 0 1rem;
-  }
-  .lang-bar-segment {
-    height: 100%;
-    transition: all 0.2s ease;
-  }
-  
-  /* Language segment colors */
-  .lang-bar-segment.python { background-color: #38bdf8; }
-  .lang-bar-segment.go { background-color: #00add8; }
-  .lang-bar-segment.js { background-color: #eab308; }
-  .lang-bar-segment.bash { background-color: #a1a1aa; }
-  .lang-bar-segment.html { background-color: #e34c26; }
-  .lang-bar-segment.css { background-color: #563d7c; }
-  .lang-bar-segment.other { background-color: #71717a; }
 
-  .legend-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .legend-item {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.85rem;
-    color: #495057;
-    font-family: Georgia, serif;
-    transition: all 0.15s ease;
-    cursor: pointer;
-  }
-  .legend-item.highlight {
-    transform: translateY(-1px);
-    color: #000000;
-    font-weight: bold;
-  }
-  .legend-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
-  }
-  
-  /* Legend dot colors */
-  .legend-dot.python { background-color: #38bdf8; }
-  .legend-dot.go { background-color: #00add8; }
-  .legend-dot.js { background-color: #eab308; }
-  .legend-dot.bash { background-color: #a1a1aa; }
-  .legend-dot.html { background-color: #e34c26; }
-  .legend-dot.css { background-color: #563d7c; }
-  .legend-dot.other { background-color: #71717a; }
   .assignment-link {
     font-weight: bold;
     color: #1a4d8f;
@@ -140,15 +82,7 @@
     <a href="https://orcid.org/0009-0007-0176-2022">ORCID</a>
   </p>
 
-  <h2>01. Technology Profile</h2>
-  <div class="lang-bar" id="dynamic-lang-bar">
-    <!-- Dynamic segments populate here on load -->
-  </div>
-  <div class="legend-grid" id="dynamic-lang-legend">
-    <!-- Dynamic legends populate here on load -->
-  </div>
-
-  <h2>02. DTI224 Course Assignments</h2>
+  <h2>DTI224 Course Assignments</h2>
   <ul class="assignment-list">
     <li class="assignment-item" onclick="location.href='Change/'">
       <a class="assignment-link" href="Change/">1. Coin Change Calculator</a>
@@ -230,7 +164,6 @@
     <p class="meta">Yenangyaung, Myanmar · 2019 – 2024</p>
   </div>
 
-  <!-- Dynamic JS Loaders -->
-  <script src="script.js"></script>
+
 </body>
 </html>
