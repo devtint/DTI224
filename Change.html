@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 5px 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Change</h2>
+    <p>Tint Naing Win | 240702404713</p>
+
+    <label>Amount: </label>
+    <input type="number" id="amount" min="0" />
+    <button onclick="calculate()">Calculate</button>
+
+    <br><br>
+
+    <table id="result-table" style="display:none;">
+        <thead>
+            <tr>
+                <th>Denomination</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody id="result-body">
+        </tbody>
+    </table>
+
+    <script>
+        function calculate() {
+            var denominations = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
+            var amount = parseInt(document.getElementById("amount").value);
+
+            if (isNaN(amount) || amount < 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+
+            var tbody = document.getElementById("result-body");
+            tbody.innerHTML = "";
+
+            var remaining = amount;
+
+            for (var i = 0; i < denominations.length; i++) {
+                var count = Math.floor(remaining / denominations[i]);
+                remaining = remaining % denominations[i];
+
+                var row = document.createElement("tr");
+                var d = document.createElement("td");
+                var c = document.createElement("td");
+                d.textContent = denominations[i];
+                c.textContent = count;
+                row.appendChild(d);
+                row.appendChild(c);
+                tbody.appendChild(row);
+            }
+
+            document.getElementById("result-table").style.display = "table";
+        }
+    </script>
+</body>
+</html>

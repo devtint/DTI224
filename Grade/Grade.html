@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Grade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculate Grade</h1>
+            <p><strong>Tint Naing Win</strong> | Student ID: 240702404713</p>
+        </header>
+
+        <div class="converter-card">
+            <h2>Grade Calculator</h2>
+            <div class="form-group">
+                <label for="score-input">Enter Amount:</label>
+                <input type="number" id="score-input" placeholder="e.g. 85" min="0" max="100">
+                <button onclick="calculateGrade()">Submit</button>
+            </div>
+            <p id="grade-result" class="result-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

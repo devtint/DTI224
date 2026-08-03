@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Measurement Converter</h1>
+            <p><strong>Tint Naing Win</strong> | Student ID: 240702404713</p>
+        </header>
+
+        <!-- 1. Length Converter -->
+        <div class="converter-card">
+            <h2>Length Converter (Inches to Cm)</h2>
+            <div class="form-group">
+                <label for="length-inch">Enter Inch:</label>
+                <input type="number" id="length-inch" value="3">
+                <button onclick="convertLength()">Submit</button>
+            </div>
+            <p id="length-result" class="result-text">Equal to 7.62 cm</p>
+        </div>
+
+        <!-- 2. Height Converter -->
+        <div class="converter-card">
+            <h2>Height Converter (Feet & Inches to Cm)</h2>
+            <div class="form-group">
+                <label for="height-ft">Enter Feet:</label>
+                <input type="number" id="height-ft" value="5" style="width: 70px;">
+                
+                <label for="height-in">Enter Inch:</label>
+                <input type="number" id="height-in" value="9" style="width: 70px;">
+                
+                <button onclick="convertHeight()">Submit</button>
+            </div>
+            <p id="height-result" class="result-text">Equal to 175.26 cm</p>
+        </div>
+
+        <!-- 3. Temperature Converter -->
+        <div class="converter-card">
+            <h2>Temperature Converter (Celsius to Fahrenheit)</h2>
+            <div class="form-group">
+                <label for="temp-c">Enter Celsius:</label>
+                <input type="number" id="temp-c" value="100">
+                <button onclick="convertTemp()">Submit</button>
+            </div>
+            <p id="temp-result" class="result-text">Equal to 212.00 °F</p>
+        </div>
+
+        <!-- 4. Area Converter -->
+        <div class="converter-card">
+            <h2>Area Converter (Acres to Sq Meters)</h2>
+            <div class="form-group">
+                <label for="area-acre">Enter Acre:</label>
+                <input type="number" id="area-acre" value="1">
+                <button onclick="convertArea()">Submit</button>
+            </div>
+            <p id="area-result" class="result-text">Equal to 4046.86 m²</p>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
